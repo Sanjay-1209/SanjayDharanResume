@@ -1,235 +1,1237 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio | Sanjay Dharan</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
-  <style>
-    /* Basic Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #0d0d0d;
-      color: #fff;
-      line-height: 1.6;
-      text-align: center;
-      padding-bottom: 50px;
-    }
-    a {
-      color: #00e6e6;
-      text-decoration: none;
-    }
-    .container {
-      width: 85%;
-      max-width: 1000px;
-      margin: 30px auto;
-      padding: 20px;
-    }
-    header {
-      margin-bottom: 30px;
-    }
-    header h1 {
-      font-size: 2.5rem;
-      color: #00e6e6;
-    }
-    header p {
-      margin: 10px 0;
-    }
-    .section {
-      background: rgba(0, 0, 0, 0.5);
-      margin: 30px 0;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 230, 230, 0.6);
-      text-align: left;
-    }
-    .section h2 {
-      border-bottom: 2px solid #00e6e6;
-      padding-bottom: 10px;
-      margin-bottom: 15px;
-      color: #00e6e6;
-    }
-    .section p,
-    .section li {
-      margin-bottom: 10px;
-      font-size: 1rem;
-    }
-    ul {
-      list-style: none;
-      padding-left: 20px;
-    }
-    li::before {
-      content: '•';
-      color: #00e6e6;
-      display: inline-block;
-      width: 1em;
-      margin-left: -1em;
-    }
-    /* Experience Bullet Points */
-    .experience ul {
-      list-style: disc;
-      margin-left: 20px;
-    }
-    .experience li::before {
-      content: '▹';
-      color: #00e6e6;
-      display: inline-block;
-      width: 1em;
-      margin-left: -1em;
-    }
-    /* Responsive Grid for Technical Skills */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 15px;
-    }
-    .skills-grid li {
-      background: rgba(0, 230, 230, 0.2);
-      padding: 10px;
-      border-radius: 5px;
-    }
-    /* Media Queries */
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      .container {
-        width: 90%;
-        padding: 10px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanjay Dharan | Data Analyst</title>
+    <style>
+        /* Base Styles and Variables */
+        :root {
+            --bg-primary: #0a0a12;
+            --bg-secondary: #12121f;
+            --accent-primary: #00ffaa;
+            --accent-secondary: #3d5afe;
+            --text-primary: #ffffff;
+            --text-secondary: #b3b3cc;
+            --radius: 8px;
+            --shadow: 0 4px 20px rgba(0, 255, 170, 0.15);
+            --glow: 0 0 15px rgba(0, 255, 170, 0.5);
+            --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            transition: var(--transition);
+        }
+
+        a {
+            color: var(--accent-primary);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--accent-secondary);
+            text-shadow: var(--glow);
+        }
+
+        /* Scroll Bar */
+        ::-webkit-scrollbar {
+            width: 10px;
+            background: var(--bg-primary);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--accent-primary);
+            border-radius: 10px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: rgba(10, 10, 18, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 255, 170, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--accent-primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            font-weight: 500;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-primary);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-primary);
+            transition: var(--transition);
+            border-radius: 2px;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+            box-shadow: var(--glow);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--bg-primary), var(--bg-secondary));
+        }
+
+        .hero-content {
+            max-width: 1000px;
+            text-align: center;
+            z-index: 2;
+            padding: 0 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+            line-height: 1.2;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero h1 span {
+            background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 0.8rem 2rem;
+            border-radius: var(--radius);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: var(--accent-primary);
+            color: var(--bg-primary);
+            border: none;
+        }
+
+        .btn-primary:hover {
+            box-shadow: var(--glow);
+            transform: translateY(-3px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--accent-primary);
+            border: 2px solid var(--accent-primary);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(0, 255, 170, 0.1);
+            box-shadow: var(--glow);
+            transform: translateY(-3px);
+        }
+
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.6;
+            pointer-events: none;
+        }
+
+        /* About Section */
+        section {
+            padding: 6rem 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 4px;
+            background: var(--accent-primary);
+            bottom: -10px;
+            left: 25%;
+            border-radius: 2px;
+            box-shadow: var(--glow);
+        }
+
+        .section-subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .about-content {
+            display: flex;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--accent-primary);
+        }
+
+        .about-text p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .info-item {
+            background: var(--bg-secondary);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(0, 255, 170, 0.1);
+        }
+
+        .info-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--glow);
+            border-color: var(--accent-primary);
+        }
+
+        .info-item h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent-primary);
+        }
+
+        .info-item p {
+            color: var(--text-secondary);
+        }
+
+        /* Experience Section */
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background: var(--accent-primary);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            box-shadow: var(--glow);
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.5s ease;
+        }
+
+        .timeline-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: var(--accent-primary);
+            border-radius: 50%;
+            top: 20px;
+            z-index: 1;
+            box-shadow: var(--glow);
+        }
+
+        .left {
+            left: 0;
+            text-align: right;
+        }
+
+        .right {
+            left: 50%;
+        }
+
+        .left::after {
+            right: -10px;
+        }
+
+        .right::after {
+            left: -10px;
+        }
+
+        .timeline-content {
+            background: var(--bg-secondary);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(0, 255, 170, 0.1);
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--glow);
+            border-color: var(--accent-primary);
+        }
+
+        .timeline-date {
+            color: var(--accent-primary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .timeline-title {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .timeline-subtitle {
+            color: var(--text-secondary);
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-desc {
+            margin-top: 1rem;
+        }
+
+        .timeline-desc ul {
+            list-style-type: none;
+        }
+
+        .timeline-desc li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-desc li::before {
+            content: '•';
+            color: var(--accent-primary);
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+        }
+
+        /* Skills Section */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category {
+            background: var(--bg-secondary);
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(0, 255, 170, 0.1);
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--glow);
+            border-color: var(--accent-primary);
+        }
+
+        .skill-category h3 {
+            color: var(--accent-primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            border-bottom: 1px solid rgba(0, 255, 170, 0.2);
+            padding-bottom: 0.5rem;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .skill-badge {
+            background: rgba(0, 255, 170, 0.1);
+            color: var(--text-secondary);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            border: 1px solid rgba(0, 255, 170, 0.1);
+        }
+
+        .skill-badge:hover {
+            background: rgba(0, 255, 170, 0.2);
+            color: var(--text-primary);
+            transform: translateY(-3px);
+            box-shadow: var(--glow);
+            border-color: var(--accent-primary);
+        }
+
+        /* Education & Certifications */
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--bg-secondary);
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(0, 255, 170, 0.1);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--glow);
+            border-color: var(--accent-primary);
+        }
+
+        .card-header {
+            margin-bottom: 1rem;
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent-primary);
+        }
+
+        .card-subtitle {
+            color: var(--text-secondary);
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-date {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .card-body {
+            flex: 1;
+        }
+
+        .card-footer {
+            margin-top: 1rem;
+            text-align: right;
+        }
+
+        /* Achievement section */
+        .achievements-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .achievement-item {
+            background: var(--bg-secondary);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(0, 255, 170, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .achievement-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--accent-primary);
+            box-shadow: var(--glow);
+        }
+
+        .achievement-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--glow);
+            border-color: var(--accent-primary);
+        }
+
+        .achievement-item p {
+            padding-left: 1rem;
+            color: var(--text-secondary);
+        }
+
+        /* Contact */
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .contact-card {
+            background: var(--bg-secondary);
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(0, 255, 170, 0.1);
+            text-align: center;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--glow);
+            border-color: var(--accent-primary);
+        }
+
+        .contact-icon {
+            font-size: 2rem;
+            color: var(--accent-primary);
+            margin-bottom: 1rem;
+        }
+
+        .contact-card h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-card p, .contact-card a {
+            color: var(--text-secondary);
+        }
+
+        .contact-card a:hover {
+            color: var(--accent-primary);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-secondary);
+            padding: 2rem 0;
+            text-align: center;
+            border-top: 1px solid rgba(0, 255, 170, 0.1);
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .footer-text {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-icon {
+            color: var(--text-secondary);
+            font-size: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .social-icon:hover {
+            color: var(--accent-primary);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Utilities */
+        .text-accent {
+            color: var(--accent-primary);
+        }
+
+        .mb-1 {
+            margin-bottom: 1rem;
+        }
+
+        .mb-2 {
+            margin-bottom: 2rem;
+        }
+
+        .mb-3 {
+            margin-bottom: 3rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 960px) {
+            .about-content {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .timeline::after {
+                left: 31px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .timeline-item::after {
+                left: 20px;
+            }
+
+            .left, .right {
+                left: 0;
+                text-align: left;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 1rem 5%;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                right: -100%;
+                width: 70%;
+                height: calc(100vh - 70px);
+                background: var(--bg-secondary);
+                flex-direction: column;
+                align-items: center;
+                padding: 2rem 0;
+                transition: var(--transition);
+                box-shadow: -5px 0px 15px rgba(0, 0, 0, 0.2);
+                border-left: 1px solid rgba(0, 255, 170, 0.1);
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .timeline-content {
+                padding: 1rem;
+            }
+
+            .cards-container, .skills-container, .contact-info {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            section {
+                padding: 4rem 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .hero-btns {
+                flex-direction: column;
+                width: 80%;
+                margin: 0 auto;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Animation Classes */
+        .fade-in {
+            animation: fadeIn 1s ease forwards;
+        }
+
+        .slide-up {
+            animation: slideUp 0.8s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Particle effect */
+        .particle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: var(--accent-primary);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--accent-primary);
+            filter: blur(1px);
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <!-- Header Section -->
-    <header>
-      <h1>SANJAY DHARAN</h1>
-      <p>+91 93607 34551 • Chennai, Tamil Nadu, India • <a href="mailto:sanjaydharand@gmail.com">sanjaydharand@gmail.com</a></p>
-      <p><a href="https://www.linkedin.com/in/sanjay-dharan-99736321b" target="_blank">LinkedIn Profile</a></p>
+    <!-- Header & Navigation -->
+    <header id="header">
+        <div class="navbar">
+            <a href="#" class="logo">Sanjay<span>Dharan</span></a>
+            <div class="nav-links" id="navLinks">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#education">Education</a>
+                <a href="#certifications">Certifications</a>
+                <a href="#achievements">Achievements</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                ☰
+            </button>
+        </div>
     </header>
 
-    <!-- Profile Section -->
-    <section class="section" id="profile">
-      <h2>PROFILE</h2>
-      <p>
-        A proactive Data Analyst with robust experience in extracting, analyzing, and collating high-quality financial and nonfinancial data. Adept at leveraging technical skills in Python, SQL, and cloud-based platforms to drive operational efficiency, streamline workflows, and support data-driven decision-making. Demonstrated ability in process automation, thematic research, and developing comprehensive insights from multiple data sources. Passionate about applying advanced data methodologies to understand global market dynamics and improve business outcomes.
-      </p>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="particles" id="particles"></div>
+        <div class="hero-content">
+            <h1 class="fade-in">Hi, I'm <span>Sanjay Dharan</span></h1>
+            <p class="slide-up">A proactive Data Analyst with robust experience in extracting, analyzing, and collating high-quality financial and non-financial data. Adept at leveraging technical skills in Python, SQL, and cloud-based platforms to drive operational efficiency, streamline workflows, and support data-driven decision-making.</p>
+            <div class="hero-btns fade-in">
+                <a href="#about" class="btn btn-primary">Explore Portfolio</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="section-header">
+            <h2 class="section-title">About Me</h2>
+            <p class="section-subtitle">Get to know my professional background and expertise</p>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Data Analyst</h3>
+                <p>A proactive Data Analyst with robust experience in extracting, analyzing, and collating high-quality financial and non-financial data. Adept at leveraging technical skills in Python, SQL, and cloud-based platforms to drive operational efficiency, streamline workflows, and support data-driven decision-making. Demonstrated ability in process automation, thematic research, and developing comprehensive insights from multiple data sources. Passionate about applying advanced data methodologies to understand global market dynamics and improve business outcomes.</p>
+            </div>
+        </div>
+        <div class="about-info">
+            <div class="info-item">
+                <h4>Data Collation & Analysis</h4>
+                <p>Experienced in extracting high-quality data from diverse sources, summarizing complex datasets, and synthesizing insights to drive informed decision-making.</p>
+            </div>
+             <div class="info-item">
+                <h4>Workflow & Process Enhancement</h4>
+                <p>Proven ability to understand and optimize workflows, contribute innovative ideas for collection methods, and support the development of efficient research and analysis tools.</p>
+            </div>
+             <div class="info-item">
+                <h4>Communication & Research</h4>
+                <p>Strong written and oral communication skills, with a keen ability to conduct thematic online research and deliver comprehensive, high-quality content for internal and external stakeholders.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="section-header">
+            <h2 class="section-title">Experience</h2>
+            <p class="section-subtitle">A detailed view of my professional journey and roles</p>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item left visible">
+                <div class="timeline-content">
+                    <span class="timeline-date">Mar 2025 – Present</span>
+                    <h3 class="timeline-title">Analyst Intern</h3>
+                    <span class="timeline-subtitle">Ecosoft Zolutions, Chennai, Tamil Nadu</span>
+                    <p class="timeline-desc">
+                        <ul>
+                            <li><b>Data Process Automation:</b> Engineered a cloud-based Leave Portal Application with integrated email automation, significantly streamlining internal data workflows.</li>
+                            <li><b>Financial Data Integration:</b> Developed and integrated a secure payment gateway into a credit-based application, ensuring high-quality financial transaction support.</li>
+                            <li><b>Team Leadership:</b> Managed and mentored junior interns, ensuring high standards in data quality and timely project delivery.</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <span class="timeline-date">Sep 2024 – Mar 2025</span>
+                    <h3 class="timeline-title">Data Analyst Intern</h3>
+                    <span class="timeline-subtitle">Tacheon Business Growth Consulting, Chennai, Tamil Nadu</span>
+                    <p class="timeline-desc">
+                        <ul>
+                            <li><b>Data Extraction & Research:</b> Designed and implemented data extraction pipelines using multiple APIs (including Amazon and Google Ads) to derive actionable market insights and support research initiatives.</li>
+                            <li><b>Workflow Enhancement:</b> Deployed the Tacheon Leave Portal and automated business processes, reducing manual data handling by 60% and ensuring efficient data management.</li>
+                            <li><b>Dashboard & Reporting:</b> Developed real-time dashboards with Looker Studio to monitor key financial metrics, aiding in timely decision-making and error reduction.</li>
+                            <li><b>Cloud Optimization:</b> Improved cloud data management with optimized Google Cloud Tables and BigQuery queries, reducing retrieval time by 40%.</li>
+                            <li><b>Process Automation:</b> Used Apps Script to automate manual processes such as email automation and data cleaning, and demonstrated proficiency in macros to streamline workflows.</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+             <div class="timeline-item left">
+                <div class="timeline-content">
+                    <span class="timeline-date">Mar 2024 – Sep 2024</span>
+                    <h3 class="timeline-title">Analyst Intern</h3>
+                    <span class="timeline-subtitle">Hyundai Motor India Ltd., Chennai, Tamil Nadu</span>
+                    <p class="timeline-desc">
+                        <ul>
+                            <li><b>AI-Driven Analysis:</b> Developed AI-powered fraud prevention models that reduced review times by 60% through automated data verification techniques.</li>
+                            <li><b>Custom Reporting Tools:</b> Built custom dashboards for internal audit teams, enhancing the accuracy and timeliness of financial discrepancy tracking.</li>
+                            <li><b>Process Optimization:</b> Collaborated cross-functionally to refine data workflows, resulting in a 40% reduction in error rates and improved overall data integrity.</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="section-header">
+            <h2 class="section-title">Skills</h2>
+            <p class="section-subtitle">My key technical and professional competencies</p>
+        </div>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3>Technical Skills</h3>
+                <div class="skill-list">
+                    <span class="skill-badge">Python</span>
+                    <span class="skill-badge">SQL</span>
+                    <span class="skill-badge">JavaScript</span>
+                    <span class="skill-badge">VS Code</span>
+                    <span class="skill-badge">Apps Script</span>
+                    <span class="skill-badge">Macros</span>
+                    <span class="skill-badge">Google Colab</span>
+                    <span class="skill-badge">GitHub</span>
+                    <span class="skill-badge">Google Cloud Platform (GCP)</span>
+                    <span class="skill-badge">Streamlit</span>
+                    <span class="skill-badge">Looker Studio</span>
+                    <span class="skill-badge">MS Office Suite (Excel, Word, PowerPoint)</span>
+                    <span class="skill-badge">Payment Gateway Integration (Razorpay API)</span>
+                    <span class="skill-badge">API Integration</span>
+                    <span class="skill-badge">Data Warehousing</span>
+                    <span class="skill-badge">Big Data Management</span>
+                    <span class="skill-badge">Exploratory Data Analysis (EDA)</span>
+                    <span class="skill-badge">Data Visualization</span>
+                    <span class="skill-badge">Fraud Detection</span>
+                    <span class="skill-badge">Compliance</span>
+                    <span class="skill-badge">Internal Controls</span>
+
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Soft Skills</h3>
+                <div class="skill-list">
+                    <span class="skill-badge">Leadership</span>
+                    <span class="skill-badge">Team Collaboration</span>
+                    <span class="skill-badge">Critical Thinking</span>
+                    <span class="skill-badge">Problem Solving</span>
+                    <span class="skill-badge">Documentation</span>
+                </div>
+            </div>
+
+        </div>
     </section>
 
     <!-- Education Section -->
-    <section class="section" id="education">
-      <h2>EDUCATION</h2>
-      <p>
-        <strong>Bachelor of Technology in Artificial Intelligence and Data Science</strong><br>
-        KPR Institute of Engineering and Technology, Coimbatore, Tamil Nadu<br>
-        <em>2021 – 2025</em>
-      </p>
+    <section id="education">
+        <div class="section-header">
+            <h2 class="section-title">Education</h2>
+            <p class="section-subtitle">My academic qualifications and background</p>
+        </div>
+        <div class="cards-container">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Bachelor of Technology in Artificial Intelligence and Data Science</h3>
+                    <p class="card-subtitle">KPR Institute of Engineering and Technology, Coimbatore, Tamil Nadu</p>
+                    <p class="card-date">2021 – 2025</p>
+                </div>
+                <div class="card-body">
+                    <p>Relevant coursework includes machine learning, data science, and artificial intelligence.</p>
+                </div>
+                <div class="card-footer">
+                    <!-- <a href="#" class="btn btn-secondary">View Transcript</a> -->
+                </div>
+            </div>
+
+        </div>
     </section>
 
-    <!-- Professional Experience Section -->
-    <section class="section experience" id="experience">
-      <h2>PROFESSIONAL EXPERIENCE</h2>
-      <!-- Ecosoft Zolutions -->
-      <div>
-        <h3>Ecosoft Zolutions, Chennai, Tamil Nadu</h3>
-        <p><strong>Analyst Intern | Mar 2025 – Present</strong></p>
-        <ul>
-          <li><strong>Data Process Automation:</strong> Engineered a cloud-based Leave Portal Application with integrated email automation, significantly streamlining internal data workflows.</li>
-          <li><strong>Financial Data Integration:</strong> Developed and integrated a secure payment gateway into a credit-based application, ensuring high-quality financial transaction support.</li>
-          <li><strong>Team Leadership:</strong> Managed and mentored junior interns, ensuring high standards in data quality and timely project delivery.</li>
-        </ul>
-      </div>
-      <!-- Tacheon Business Growth Consulting -->
-      <div>
-        <h3>Tacheon Business Growth Consulting, Chennai, Tamil Nadu</h3>
-        <p><strong>Data Analyst Intern | Sep 2024 – Mar 2025</strong></p>
-        <ul>
-          <li><strong>Data Extraction & Research:</strong> Designed and implemented data extraction pipelines using multiple APIs (including Amazon and Google Ads) to derive actionable market insights and support research initiatives.</li>
-          <li><strong>Workflow Enhancement:</strong> Deployed the Tacheon Leave Portal and automated business processes, reducing manual data handling by 60% and ensuring efficient data management.</li>
-          <li><strong>Dashboard & Reporting:</strong> Developed real-time dashboards with Looker Studio to monitor key financial metrics, aiding in timely decision-making and error reduction.</li>
-          <li><strong>Cloud Optimization:</strong> Improved cloud data management with optimized Google Cloud Tables and BigQuery queries, reducing retrieval time by 40%.</li>
-          <li><strong>Process Automation:</strong> Used Apps Script to automate manual processes such as email automation and data cleaning, and demonstrated proficiency in macros to streamline workflows.</li>
-        </ul>
-      </div>
-      <!-- Hyundai Motor India Ltd. -->
-      <div>
-        <h3>Hyundai Motor India Ltd., Chennai, Tamil Nadu</h3>
-        <p><strong>Analyst Intern | Mar 2024 – Sep 2024</strong></p>
-        <ul>
-          <li><strong>AI-Driven Analysis:</strong> Developed AI-powered fraud prevention models that reduced review times by 60% through automated data verification techniques.</li>
-          <li><strong>Custom Reporting Tools:</strong> Built custom dashboards for internal audit teams, enhancing the accuracy and timeliness of financial discrepancy tracking.</li>
-          <li><strong>Process Optimization:</strong> Collaborated cross-functionally to refine data workflows, resulting in a 40% reduction in error rates and improved overall data integrity.</li>
-        </ul>
-      </div>
+    <!-- Certifications Section -->
+    <section id="certifications">
+        <div class="section-header">
+            <h2 class="section-title">Certifications</h2>
+            <p class="section-subtitle">Professional certifications validating my expertise</p>
+        </div>
+        <div class="cards-container">        
+        <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">NASSCOM FutureSkills Prime – Acquiring Data</h3>
+                    <p class="card-subtitle">NASSCOM</p>
+                    <!--<p class="card-date">Issued June 2023</p>-->
+                </div>
+                <div class="card-body">
+                    <p>Certified in acquiring data skills.</p>
+                </div>
+                <div class="card-footer">
+                    <!--<a href="#" class="btn btn-secondary">View Credential</a>-->
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">XEBIA Advanced Python P</h3>
+                    <p class="card-subtitle">XEBIA</p>
+                    <!--<p class="card-date">Issued June 2023</p>-->
+                </div>
+                <div class="card-body">
+                    <p>Certified in Advanced Python.</p>
+                </div>
+                <div class="card-footer">
+                    <!--<a href="#" class="btn btn-secondary">View Credential</a>-->
+                </div>
+            </div>
+             <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">R programming</h3>
+                    <p class="card-subtitle"></p>
+                    <!--<p class="card-date">Issued June 2023</p>-->
+                </div>
+                <div class="card-body">
+                    <p>Certified in R Programming.</p>
+                </div>
+                <div class="card-footer">
+                    <!--<a href="#" class="btn btn-secondary">View Credential</a>-->
+                </div>
+            </div>
+             <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Web Development Framework</h3>
+                    <p class="card-subtitle"></p>
+                    <!--<p class="card-date">Issued June 2023</p>-->
+                </div>
+                <div class="card-body">
+                    <p>Certified in web development Framework.</p>
+                </div>
+                <div class="card-footer">
+                    <!--<a href="#" class="btn btn-secondary">View Credential</a>-->
+                </div>
+            </div>
+             <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Coursera AWS S3 Basics, Kubernetes, VPC</h3>
+                    <p class="card-subtitle">Coursera</p>
+                    <!--<p class="card-date">Issued June 2023</p>-->
+                </div>
+                <div class="card-body">
+                    <p>Certified in AWS S3 Basics, Kubernetes, VPC.</p>
+                </div>
+                <div class="card-footer">
+                    <!--<a href="#" class="btn btn-secondary">View Credential</a>-->
+                </div>
+            </div>
+             <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">IBM Data Science, Data Science Methodology, Tools for Data Science, Machine Learning Pipeline (Dataiku)</h3>
+                    <p class="card-subtitle">IBM</p>
+                    <!--<p class="card-date">Issued June 2023</p>-->
+                </div>
+                <div class="card-body">
+                    <p>Certified in Data Science, Data Science Methodology, Tools for Data Science, Machine Learning Pipeline (Dataiku).</p>
+                </div>
+                <div class="card-footer">
+                    <!--<a href="#" class="btn btn-secondary">View Credential</a>-->
+                </div>
+            </div>
+              <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Chatbot Development</h3>
+                    <p class="card-subtitle"></p>
+                    <!--<p class="card-date">Issued June 2023</p>-->
+                </div>
+                <div class="card-body">
+                    <p>Certified in Chatbot Development.</p>
+                </div>
+                <div class="card-footer">
+                    <!--<a href="#" class="btn btn-secondary">View Credential</a>-->
+                </div>
+            </div>
+             <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Oracle APEX Intern | INOAUG: India Oracle APEX User Group | Virtu</h3>
+                    <p class="card-subtitle"></p>
+                    <!--<p class="card-date">Issued June 2023</p>-->
+                </div>
+                <div class="card-body">
+                    <p>Certified in Oracle APEX.</p>
+                </div>
+                <div class="card-footer">
+                    <!--<a href="#" class="btn btn-secondary">View Credential</a>-->
+                </div>
+            </div>
+
+        </div>
     </section>
 
-    <!-- Technical Skills Section -->
-    <section class="section" id="technical-skills">
-      <h2>TECHNICAL SKILLS</h2>
-      <ul class="skills-grid">
-        <li><strong>Programming Languages:</strong> Python, SQL, JavaScript</li>
-        <li><strong>Tools & Platforms:</strong> VS Code, Apps Script, Macros, Google Colab, GitHub, Google Cloud Platform (GCP), Streamlit, Looker Studio, MS Office Suite (Excel, Word, PowerPoint)</li>
-        <li><strong>Integration & Automation:</strong> Payment Gateway Integration (Razorpay API), API Integration</li>
-        <li><strong>Data & Analytics:</strong> Data Warehousing, Big Data Management, Exploratory Data Analysis (EDA), Data Visualization</li>
-        <li><strong>Risk Management:</strong> Fraud Detection, Compliance, Internal Controls</li>
-        <li><strong>Soft Skills:</strong> Leadership, Team Collaboration, Critical Thinking, Problem Solving, Documentation</li>
-      </ul>
+    <!-- Achievements Section -->
+    <section id="achievements">
+        <div class="section-header">
+            <h2 class="section-title">Achievements</h2>
+            <p class="section-subtitle">Notable accomplishments and recognitions</p>
+        </div>
+        <div class="achievements-list">
+            <div class="achievement-item">
+                <p>Led cross-functional teams to deliver high-impact, data-driven projects under tight deadlines.</p>
+            </div>
+            <div class="achievement-item">
+                <p>Enhanced operational efficiency by reducing manual processing and streamlining data workflows.</p>
+            </div>
+            <div class="achievement-item">
+                <p>Recognized for strong technical proficiency and the ability to rapidly learn and implement innovative data solutions.</p>
+            </div>
+             <div class="achievement-item">
+                <p>Contributed to process improvement projects, including LEAN/automation initiatives, that elevated overall data quality and operational accuracy.</p>
+            </div>
+        </div>
     </section>
 
-    <!-- Certifications & Key Achievements Section -->
-    <section class="section" id="certifications">
-      <h2>CERTIFICATIONS & KEY ACHIEVEMENTS</h2>
-      <div>
-        <h3>Certifications</h3>
-        <ul>
-          <li>NASSCOM FutureSkills Prime – Acquiring Data</li>
-          <li>XEBIA Advanced Python P</li>
-          <li>R programming</li>
-          <li>Web Development Framework</li>
-          <li>Coursera AWS S3 Basics, Kubernetes, VPC</li>
-          <li>IBM Data Science, Data Science Methodology, Tools for Data Science, Machine Learning Pipeline (Dataiku)</li>
-          <li>Chatbot Development</li>
-          <li>Oracle APEX Intern | INOAUG: India Oracle APEX User Group | Virtu</li>
-        </ul>
-      </div>
-      <div>
-        <h3>Key Achievements</h3>
-        <ul>
-          <li>Led cross-functional teams to deliver high-impact, data-driven projects under tight deadlines.</li>
-          <li>Enhanced operational efficiency by reducing manual processing and streamlining data workflows.</li>
-          <li>Recognized for strong technical proficiency and the ability to rapidly learn and implement innovative data solutions.</li>
-          <li>Contributed to process improvement projects, including LEAN/automation initiatives, that elevated overall data quality and operational accuracy.</li>
-        </ul>
-      </div>
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="section-header">
+            <h2 class="section-title">Contact</h2>
+            <p class="section-subtitle">Feel free to reach out for collaboration or inquiries</p>
+        </div>
+        <div class="contact-info">
+            <div class="contact-card">
+                <div class="contact-icon">
+                   <i class="fa fa-phone"></i>
+                </div>
+                <h3>Phone</h3>
+                <p><a href="tel:+919360734551">+91 93607 34551</a></p>
+            </div>
+            <div class="contact-card">
+                <div class="contact-icon">
+                   <i class="fa fa-envelope"></i>
+                </div>
+                <h3>Email</h3>
+                <p><a href="mailto:sanjaydharand@gmail.com">sanjaydharand@gmail.com</a></p>
+            </div>
+            <div class="contact-card">
+                <div class="contact-icon">
+                   <i class="fa fa-linkedin"></i>
+                </div>
+                <h3>LinkedIn</h3>
+                <p><a href="https://www.linkedin.com/in/sanjay-dharan-99736321b">linkedin.com/in/sanjay-dharan-99736321b</a></p>
+            </div>
+        </div>
     </section>
 
-    <!-- Professional Relevance Section -->
-    <section class="section" id="professional-relevance">
-      <h2>PROFESSIONAL RELEVANCE</h2>
-      <ul>
-        <li><strong>Data Collation & Analysis:</strong> Experienced in extracting high-quality data from diverse sources, summarizing complex datasets, and synthesizing insights to drive informed decision-making.</li>
-        <li><strong>Workflow & Process Enhancement:</strong> Proven ability to understand and optimize workflows, contribute innovative ideas for collection methods, and support the development of efficient research and analysis tools.</li>
-        <li><strong>Communication & Research:</strong> Strong written and oral communication skills, with a keen ability to conduct thematic online research and deliver comprehensive, high-quality content for internal and external stakeholders.</li>
-      </ul>
-    </section>
-  </div>
-  <!-- Optional JavaScript for future interactivity can be added here -->
-  <script>
-    // Example: Smooth scroll for internal links (if you add a navigation menu later)
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          document.querySelector(this.getAttribute('href')).scrollIntoView({
-              behavior: 'smooth'
-          });
-      });
-    });
-  </script>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p class="footer-text">Connect with me!</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/sanjay-dharan-99736321b" class="social-icon"><i class="fa fa-linkedin"></i></a>
+                 <a href="mailto:sanjaydharand@gmail.com" class="social-icon"><i class="fa fa-envelope"></i></a>
+                 <a href="tel:+919360734551" class="social-icon"><i class="fa fa-phone"></i></a>
+            </div>
+            <p class="copyright">© 2024 Sanjay Dharan. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Timeline Observer
+        const timelineItems = document.querySelectorAll('.timeline-item');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        });
+
+        timelineItems.forEach(item => {
+            observer.observe(item);
+        });
+
+        // Particle Effect
+        document.addEventListener('DOMContentLoaded', () => {
+            const particlesContainer = document.getElementById('particles');
+            const numParticles = 50;
+
+            for (let i = 0; i < numParticles; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                particle.style.left = `${Math.random() * 100}vw`;
+                particle.style.top = `${Math.random() * 100}vh`;
+                particle.style.animationDelay = `${Math.random() * 5}s`;
+                particlesContainer.appendChild(particle);
+            }
+        });
+    </script>
 </body>
 </html>
