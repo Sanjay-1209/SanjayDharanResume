@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | Sanjay Dharan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0d0d0d;
+      color: #fff;
+      line-height: 1.6;
+      text-align: center;
+      padding-bottom: 50px;
+    }
+    a {
+      color: #00e6e6;
+      text-decoration: none;
+    }
+    .container {
+      width: 85%;
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+    header {
+      margin-bottom: 30px;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      color: #00e6e6;
+    }
+    header p {
+      margin: 10px 0;
+    }
+    .section {
+      background: rgba(0, 0, 0, 0.5);
+      margin: 30px 0;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 230, 230, 0.6);
+      text-align: left;
+    }
+    .section h2 {
+      border-bottom: 2px solid #00e6e6;
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+      color: #00e6e6;
+    }
+    .section p,
+    .section li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+    }
+    ul {
+      list-style: none;
+      padding-left: 20px;
+    }
+    li::before {
+      content: '•';
+      color: #00e6e6;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+    /* Experience Bullet Points */
+    .experience ul {
+      list-style: disc;
+      margin-left: 20px;
+    }
+    .experience li::before {
+      content: '▹';
+      color: #00e6e6;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+    /* Responsive Grid for Technical Skills */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+    }
+    .skills-grid li {
+      background: rgba(0, 230, 230, 0.2);
+      padding: 10px;
+      border-radius: 5px;
+    }
+    /* Media Queries */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      .container {
+        width: 90%;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header Section -->
+    <header>
+      <h1>SANJAY DHARAN</h1>
+      <p>+91 93607 34551 • Chennai, Tamil Nadu, India • <a href="mailto:sanjaydharand@gmail.com">sanjaydharand@gmail.com</a></p>
+      <p><a href="https://www.linkedin.com/in/sanjay-dharan-99736321b" target="_blank">LinkedIn Profile</a></p>
+    </header>
+
+    <!-- Profile Section -->
+    <section class="section" id="profile">
+      <h2>PROFILE</h2>
+      <p>
+        A proactive Data Analyst with robust experience in extracting, analyzing, and collating high-quality financial and nonfinancial data. Adept at leveraging technical skills in Python, SQL, and cloud-based platforms to drive operational efficiency, streamline workflows, and support data-driven decision-making. Demonstrated ability in process automation, thematic research, and developing comprehensive insights from multiple data sources. Passionate about applying advanced data methodologies to understand global market dynamics and improve business outcomes.
+      </p>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section" id="education">
+      <h2>EDUCATION</h2>
+      <p>
+        <strong>Bachelor of Technology in Artificial Intelligence and Data Science</strong><br>
+        KPR Institute of Engineering and Technology, Coimbatore, Tamil Nadu<br>
+        <em>2021 – 2025</em>
+      </p>
+    </section>
+
+    <!-- Professional Experience Section -->
+    <section class="section experience" id="experience">
+      <h2>PROFESSIONAL EXPERIENCE</h2>
+      <!-- Ecosoft Zolutions -->
+      <div>
+        <h3>Ecosoft Zolutions, Chennai, Tamil Nadu</h3>
+        <p><strong>Analyst Intern | Mar 2025 – Present</strong></p>
+        <ul>
+          <li><strong>Data Process Automation:</strong> Engineered a cloud-based Leave Portal Application with integrated email automation, significantly streamlining internal data workflows.</li>
+          <li><strong>Financial Data Integration:</strong> Developed and integrated a secure payment gateway into a credit-based application, ensuring high-quality financial transaction support.</li>
+          <li><strong>Team Leadership:</strong> Managed and mentored junior interns, ensuring high standards in data quality and timely project delivery.</li>
+        </ul>
+      </div>
+      <!-- Tacheon Business Growth Consulting -->
+      <div>
+        <h3>Tacheon Business Growth Consulting, Chennai, Tamil Nadu</h3>
+        <p><strong>Data Analyst Intern | Sep 2024 – Mar 2025</strong></p>
+        <ul>
+          <li><strong>Data Extraction & Research:</strong> Designed and implemented data extraction pipelines using multiple APIs (including Amazon and Google Ads) to derive actionable market insights and support research initiatives.</li>
+          <li><strong>Workflow Enhancement:</strong> Deployed the Tacheon Leave Portal and automated business processes, reducing manual data handling by 60% and ensuring efficient data management.</li>
+          <li><strong>Dashboard & Reporting:</strong> Developed real-time dashboards with Looker Studio to monitor key financial metrics, aiding in timely decision-making and error reduction.</li>
+          <li><strong>Cloud Optimization:</strong> Improved cloud data management with optimized Google Cloud Tables and BigQuery queries, reducing retrieval time by 40%.</li>
+          <li><strong>Process Automation:</strong> Used Apps Script to automate manual processes such as email automation and data cleaning, and demonstrated proficiency in macros to streamline workflows.</li>
+        </ul>
+      </div>
+      <!-- Hyundai Motor India Ltd. -->
+      <div>
+        <h3>Hyundai Motor India Ltd., Chennai, Tamil Nadu</h3>
+        <p><strong>Analyst Intern | Mar 2024 – Sep 2024</strong></p>
+        <ul>
+          <li><strong>AI-Driven Analysis:</strong> Developed AI-powered fraud prevention models that reduced review times by 60% through automated data verification techniques.</li>
+          <li><strong>Custom Reporting Tools:</strong> Built custom dashboards for internal audit teams, enhancing the accuracy and timeliness of financial discrepancy tracking.</li>
+          <li><strong>Process Optimization:</strong> Collaborated cross-functionally to refine data workflows, resulting in a 40% reduction in error rates and improved overall data integrity.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section class="section" id="technical-skills">
+      <h2>TECHNICAL SKILLS</h2>
+      <ul class="skills-grid">
+        <li><strong>Programming Languages:</strong> Python, SQL, JavaScript</li>
+        <li><strong>Tools & Platforms:</strong> VS Code, Apps Script, Macros, Google Colab, GitHub, Google Cloud Platform (GCP), Streamlit, Looker Studio, MS Office Suite (Excel, Word, PowerPoint)</li>
+        <li><strong>Integration & Automation:</strong> Payment Gateway Integration (Razorpay API), API Integration</li>
+        <li><strong>Data & Analytics:</strong> Data Warehousing, Big Data Management, Exploratory Data Analysis (EDA), Data Visualization</li>
+        <li><strong>Risk Management:</strong> Fraud Detection, Compliance, Internal Controls</li>
+        <li><strong>Soft Skills:</strong> Leadership, Team Collaboration, Critical Thinking, Problem Solving, Documentation</li>
+      </ul>
+    </section>
+
+    <!-- Certifications & Key Achievements Section -->
+    <section class="section" id="certifications">
+      <h2>CERTIFICATIONS & KEY ACHIEVEMENTS</h2>
+      <div>
+        <h3>Certifications</h3>
+        <ul>
+          <li>NASSCOM FutureSkills Prime – Acquiring Data</li>
+          <li>XEBIA Advanced Python P</li>
+          <li>R programming</li>
+          <li>Web Development Framework</li>
+          <li>Coursera AWS S3 Basics, Kubernetes, VPC</li>
+          <li>IBM Data Science, Data Science Methodology, Tools for Data Science, Machine Learning Pipeline (Dataiku)</li>
+          <li>Chatbot Development</li>
+          <li>Oracle APEX Intern | INOAUG: India Oracle APEX User Group | Virtu</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Key Achievements</h3>
+        <ul>
+          <li>Led cross-functional teams to deliver high-impact, data-driven projects under tight deadlines.</li>
+          <li>Enhanced operational efficiency by reducing manual processing and streamlining data workflows.</li>
+          <li>Recognized for strong technical proficiency and the ability to rapidly learn and implement innovative data solutions.</li>
+          <li>Contributed to process improvement projects, including LEAN/automation initiatives, that elevated overall data quality and operational accuracy.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Professional Relevance Section -->
+    <section class="section" id="professional-relevance">
+      <h2>PROFESSIONAL RELEVANCE</h2>
+      <ul>
+        <li><strong>Data Collation & Analysis:</strong> Experienced in extracting high-quality data from diverse sources, summarizing complex datasets, and synthesizing insights to drive informed decision-making.</li>
+        <li><strong>Workflow & Process Enhancement:</strong> Proven ability to understand and optimize workflows, contribute innovative ideas for collection methods, and support the development of efficient research and analysis tools.</li>
+        <li><strong>Communication & Research:</strong> Strong written and oral communication skills, with a keen ability to conduct thematic online research and deliver comprehensive, high-quality content for internal and external stakeholders.</li>
+      </ul>
+    </section>
+  </div>
+  <!-- Optional JavaScript for future interactivity can be added here -->
+  <script>
+    // Example: Smooth scroll for internal links (if you add a navigation menu later)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+              behavior: 'smooth'
+          });
+      });
+    });
+  </script>
+</body>
+</html>
