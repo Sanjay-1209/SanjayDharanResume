@@ -298,6 +298,7 @@
             box-shadow: var(--shadow);
             transition: var(--transition);
             border: 1px solid rgba(0, 255, 170, 0.1);
+            height: 100%;
         }
 
         .info-item:hover {
@@ -446,6 +447,7 @@
             box-shadow: var(--shadow);
             transition: var(--transition);
             border: 1px solid rgba(0, 255, 170, 0.1);
+            height: 100%;
         }
 
         .skill-category:hover {
@@ -557,6 +559,7 @@
             border: 1px solid rgba(0, 255, 170, 0.1);
             position: relative;
             overflow: hidden;
+            height: 100%;
         }
 
         .achievement-item::before {
@@ -581,6 +584,93 @@
             color: var(--text-secondary);
         }
 
+        /* Recommendations Section */
+        .recommendations-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .recommendation-card {
+            background: var(--bg-secondary);
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(0, 255, 170, 0.1);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .recommendation-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--glow);
+            border-color: var(--accent-primary);
+        }
+
+        .recommendation-card::before {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-size: 4rem;
+            color: rgba(0, 255, 170, 0.2);
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+
+        .recommendation-content {
+            padding: 1rem 0 0 1rem;
+            font-style: italic;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            flex: 1;
+        }
+
+        .recommender {
+            display: flex;
+            align-items: center;
+            margin-top: 1rem;
+            border-top: 1px solid rgba(0, 255, 170, 0.1);
+            padding-top: 1rem;
+        }
+
+        .recommender-info {
+            flex: 1;
+        }
+
+        .recommender-name {
+            font-weight: 600;
+            color: var(--accent-primary);
+            margin-bottom: 0.2rem;
+        }
+
+        .recommender-title {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.2rem;
+        }
+
+        .recommender-relation {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        .linkedin-link {
+            margin-left: 0.5rem;
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            transition: var(--transition);
+        }
+
+        .linkedin-link:hover {
+            color: var(--accent-primary);
+            transform: translateY(-2px);
+        }
+
         /* Contact */
         .contact-info {
             display: grid;
@@ -597,6 +687,7 @@
             transition: var(--transition);
             border: 1px solid rgba(0, 255, 170, 0.1);
             text-align: center;
+            height: 100%;
         }
 
         .contact-card:hover {
@@ -750,7 +841,7 @@
                 padding: 1rem;
             }
 
-            .cards-container, .skills-container, .contact-info {
+            .cards-container, .skills-container, .contact-info, .recommendations-container {
                 grid-template-columns: 1fr;
             }
         }
@@ -834,6 +925,7 @@
                 <a href="#education">Education</a>
                 <a href="#certifications">Certifications</a>
                 <a href="#achievements">Achievements</a>
+                <a href="#recommendations">Recommendations</a>
                 <a href="#contact">Contact</a>
             </div>
             <button class="mobile-menu-btn" id="mobileMenuBtn">
@@ -880,7 +972,6 @@
                 <h4>Communication & Research</h4>
                 <p>Strong written and oral communication skills, with a keen ability to conduct thematic online research and deliver comprehensive, high-quality content for internal and external stakeholders.</p>
             </div>
-
         </div>
     </section>
 
@@ -916,322 +1007,389 @@
                             <li><b>Workflow Enhancement:</b> Deployed the Tacheon Leave Portal and automated business processes, reducing manual data handling by 60% and ensuring efficient data management.</li>
                             <li><b>Dashboard & Reporting:</b> Developed real-time dashboards with Looker Studio to monitor key financial metrics, aiding in timely decision-making and error reduction.</li>
                             <li><b>Cloud Optimization:</b> Improved cloud data management with optimized Google Cloud Tables and BigQuery queries, reducing retrieval time by 40%.</li>
-                            <li><b>Process Automation:</b> Used Apps Script to automate manual processes such as email automation and data cleaning, and demonstrated proficiency in macros to streamline workflows.</li>
-                        </ul>
-                    </p>
-                </div>
-            </div>
-             <div class="timeline-item left">
-                <div class="timeline-content">
-                    <span class="timeline-date">Mar 2024 – Sep 2024</span>
-                    <h3 class="timeline-title">Analyst Intern</h3>
-                    <span class="timeline-subtitle">Hyundai Motor India Ltd., Chennai, Tamil Nadu</span>
-                    <p class="timeline-desc">
-                        <ul>
-                            <li><b>AI-Driven Analysis:</b> Developed AI-powered fraud prevention models that reduced review times by 60% through automated data verification techniques.</li>
-                            <li><b>Custom Reporting Tools:</b> Built custom dashboards for internal audit teams, enhancing the accuracy and timeliness of financial discrepancy tracking.</li>
-                            <li><b>Process Optimization:</b> Collaborated cross-functionally to refine data workflows, resulting in a 40% reduction in error rates and improved overall data integrity.</li>
-                        </ul>
-                    </p>
-                </div>
+                            <li><b>Process Automation:</b> Used Apps Script to automate manual processes such as email automation and data cleaning, and demonstrated proficiency in macros to streamline workflows.
+                    </ul>
+                </p>
             </div>
         </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills">
-        <div class="section-header">
-            <h2 class="section-title">Skills</h2>
-            <p class="section-subtitle">My key technical and professional competencies</p>
-        </div>
-        <div class="skills-container">
-            <div class="skill-category">
-                <h3>Technical Skills</h3>
-                <div class="skill-list">
-                    <span class="skill-badge">Python</span>
-                    <span class="skill-badge">SQL</span>
-                    <span class="skill-badge">JavaScript</span>
-                    <span class="skill-badge">VS Code</span>
-                    <span class="skill-badge">Apps Script</span>
-                    <span class="skill-badge">Macros</span>
-                    <span class="skill-badge">Google Colab</span>
-                    <span class="skill-badge">GitHub</span>
-                    <span class="skill-badge">Google Cloud Platform (GCP)</span>
-                    <span class="skill-badge">Streamlit</span>
-                    <span class="skill-badge">Looker Studio</span>
-                    <span class="skill-badge">MS Office Suite (Excel, Word, PowerPoint)</span>
-                    <span class="skill-badge">Payment Gateway Integration (Razorpay API)</span>
-                    <span class="skill-badge">API Integration</span>
-                    <span class="skill-badge">Data Warehousing</span>
-                    <span class="skill-badge">Big Data Management</span>
-                    <span class="skill-badge">Exploratory Data Analysis (EDA)</span>
-                    <span class="skill-badge">Data Visualization</span>
-                    <span class="skill-badge">Fraud Detection</span>
-                    <span class="skill-badge">Compliance</span>
-                    <span class="skill-badge">Internal Controls</span>
-
-                </div>
+         <div class="timeline-item left">
+            <div class="timeline-content">
+                <span class="timeline-date">Mar 2024 – Sep 2024</span>
+                <h3 class="timeline-title">Analyst Intern</h3>
+                <span class="timeline-subtitle">Hyundai Motor India Ltd., Chennai, Tamil Nadu</span>
+                <p class="timeline-desc">
+                    <ul>
+                        <li><b>AI-Driven Analysis:</b> Developed AI-powered fraud prevention models that reduced review times by 60% through automated data verification techniques.</li>
+                        <li><b>Custom Reporting Tools:</b> Built custom dashboards for internal audit teams, enhancing the accuracy and timeliness of financial discrepancy tracking.</li>
+                        <li><b>Process Optimization:</b> Collaborated cross-functionally to refine data workflows, resulting in a 40% reduction in error rates and improved overall data integrity.</li>
+                    </ul>
+                </p>
             </div>
-            <div class="skill-category">
-                <h3>Soft Skills</h3>
-                <div class="skill-list">
-                    <span class="skill-badge">Leadership</span>
-                    <span class="skill-badge">Team Collaboration</span>
-                    <span class="skill-badge">Critical Thinking</span>
-                    <span class="skill-badge">Problem Solving</span>
-                    <span class="skill-badge">Documentation</span>
-                </div>
+        </div>
+    </div>
+</section>
+<!-- Skills Section -->
+<section id="skills">
+    <div class="section-header">
+        <h2 class="section-title">Skills</h2>
+        <p class="section-subtitle">My key technical and professional competencies</p>
+    </div>
+    <div class="skills-container">
+        <div class="skill-category">
+            <h3>Technical Skills</h3>
+            <div class="skill-list">
+                <span class="skill-badge">Python</span>
+                <span class="skill-badge">SQL</span>
+                <span class="skill-badge">JavaScript</span>
+                <span class="skill-badge">VS Code</span>
+                <span class="skill-badge">Apps Script</span>
+                <span class="skill-badge">Macros</span>
+                <span class="skill-badge">Google Colab</span>
+                <span class="skill-badge">GitHub</span>
+                <span class="skill-badge">Google Cloud Platform (GCP)</span>
+                <span class="skill-badge">Streamlit</span>
+                <span class="skill-badge">Looker Studio</span>
+                <span class="skill-badge">MS Office Suite (Excel, Word, PowerPoint)</span>
+                <span class="skill-badge">Payment Gateway Integration (Razorpay API)</span>
+                <span class="skill-badge">API Integration</span>
+                <span class="skill-badge">Data Warehousing</span>
+                <span class="skill-badge">Big Data Management</span>
+                <span class="skill-badge">Exploratory Data Analysis (EDA)</span>
+                <span class="skill-badge">Data Visualization</span>
+                <span class="skill-badge">Fraud Detection</span>
+                <span class="skill-badge">Compliance</span>
+                <span class="skill-badge">Internal Controls</span>
             </div>
-
         </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education">
-        <div class="section-header">
-            <h2 class="section-title">Education</h2>
-            <p class="section-subtitle">My academic qualifications and background</p>
-        </div>
-        <div class="cards-container">
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">Bachelor of Technology in Artificial Intelligence and Data Science</h3>
-                    <p class="card-subtitle">KPR Institute of Engineering and Technology, Coimbatore, Tamil Nadu</p>
-                    <p class="card-date">2021 – 2025</p>
-                </div>
-                <div class="card-body">
-                    <p>Relevant coursework includes machine learning, data science, and artificial intelligence.</p>
-                </div>
-                <div class="card-footer">
-                    <!-- <a href="#" class="btn btn-secondary">View Transcript</a> -->
-                </div>
+        <div class="skill-category">
+            <h3>Soft Skills</h3>
+            <div class="skill-list">
+                <span class="skill-badge">Leadership</span>
+                <span class="skill-badge">Team Collaboration</span>
+                <span class="skill-badge">Critical Thinking</span>
+                <span class="skill-badge">Problem Solving</span>
+                <span class="skill-badge">Documentation</span>
             </div>
-
         </div>
-    </section>
-
-    <!-- Certifications Section -->
-    <section id="certifications">
-        <div class="section-header">
-            <h2 class="section-title">Certifications</h2>
-            <p class="section-subtitle">Professional certifications validating my expertise</p>
-        </div>
-        <div class="cards-container">        
+    </div>
+</section>
+<!-- Education Section -->
+<section id="education">
+    <div class="section-header">
+        <h2 class="section-title">Education</h2>
+        <p class="section-subtitle">My academic qualifications and background</p>
+    </div>
+    <div class="cards-container">
         <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">NASSCOM FutureSkills Prime – Acquiring Data</h3>
-                    <p class="card-subtitle">NASSCOM</p>
-                    <!--<p class="card-date">Issued June 2023</p>-->
-                </div>
-                <div class="card-body">
-                    <p>Certified in acquiring data skills.</p>
-                </div>
-                <div class="card-footer">
-                    <!--<a href="#" class="btn btn-secondary">View Credential</a>-->
-                </div>
+            <div class="card-header">
+                <h3 class="card-title">Bachelor of Technology in Artificial Intelligence and Data Science</h3>
+                <p class="card-subtitle">KPR Institute of Engineering and Technology, Coimbatore, Tamil Nadu</p>
+                <p class="card-date">2021 – 2025</p>
             </div>
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">XEBIA Advanced Python P</h3>
-                    <p class="card-subtitle">XEBIA</p>
-                    <!--<p class="card-date">Issued June 2023</p>-->
-                </div>
-                <div class="card-body">
-                    <p>Certified in Advanced Python.</p>
-                </div>
-                <div class="card-footer">
-                    <!--<a href="#" class="btn btn-secondary">View Credential</a>-->
-                </div>
+            <div class="card-body">
+                <p>Relevant coursework includes machine learning, data science, and artificial intelligence.</p>
             </div>
-             <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">R programming</h3>
-                    <p class="card-subtitle"></p>
-                    <!--<p class="card-date">Issued June 2023</p>-->
-                </div>
-                <div class="card-body">
-                    <p>Certified in R Programming.</p>
-                </div>
-                <div class="card-footer">
-                    <!--<a href="#" class="btn btn-secondary">View Credential</a>-->
-                </div>
+            <div class="card-footer">
+                <!-- <a href="#" class="btn btn-secondary">View Transcript</a> -->
             </div>
-             <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">Web Development Framework</h3>
-                    <p class="card-subtitle"></p>
-                    <!--<p class="card-date">Issued June 2023</p>-->
-                </div>
-                <div class="card-body">
-                    <p>Certified in web development Framework.</p>
-                </div>
-                <div class="card-footer">
-                    <!--<a href="#" class="btn btn-secondary">View Credential</a>-->
-                </div>
+        </div>
+    </div>
+</section>
+<!-- Certifications Section -->
+<section id="certifications">
+    <div class="section-header">
+        <h2 class="section-title">Certifications</h2>
+        <p class="section-subtitle">Professional certifications validating my expertise</p>
+    </div>
+    <div class="cards-container">        
+    <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">NASSCOM FutureSkills Prime – Acquiring Data</h3>
+                <p class="card-subtitle">NASSCOM</p>
+                <!--<p class="card-date">Issued June 2023</p>-->
             </div>
-             <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">Coursera AWS S3 Basics, Kubernetes, VPC</h3>
-                    <p class="card-subtitle">Coursera</p>
-                    <!--<p class="card-date">Issued June 2023</p>-->
-                </div>
-                <div class="card-body">
-                    <p>Certified in AWS S3 Basics, Kubernetes, VPC.</p>
-                </div>
-                <div class="card-footer">
-                    <!--<a href="#" class="btn btn-secondary">View Credential</a>-->
-                </div>
+            <div class="card-body">
+                <p>Certified in acquiring data skills.</p>
             </div>
-             <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">IBM Data Science, Data Science Methodology, Tools for Data Science, Machine Learning Pipeline (Dataiku)</h3>
-                    <p class="card-subtitle">IBM</p>
-                    <!--<p class="card-date">Issued June 2023</p>-->
-                </div>
-                <div class="card-body">
-                    <p>Certified in Data Science, Data Science Methodology, Tools for Data Science, Machine Learning Pipeline (Dataiku).</p>
-                </div>
-                <div class="card-footer">
-                    <!--<a href="#" class="btn btn-secondary">View Credential</a>-->
-                </div>
+            <div class="card-footer">
+                <!--<a href="#" class="btn btn-secondary">View Credential</a>-->
             </div>
-              <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">Chatbot Development</h3>
-                    <p class="card-subtitle"></p>
-                    <!--<p class="card-date">Issued June 2023</p>-->
-                </div>
-                <div class="card-body">
-                    <p>Certified in Chatbot Development.</p>
-                </div>
-                <div class="card-footer">
-                    <!--<a href="#" class="btn btn-secondary">View Credential</a>-->
-                </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">XEBIA Advanced Python P</h3>
+                <p class="card-subtitle">XEBIA</p>
+                <!--<p class="card-date">Issued June 2023</p>-->
             </div>
-             <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">Oracle APEX Intern | INOAUG: India Oracle APEX User Group | Virtu</h3>
-                    <p class="card-subtitle"></p>
-                    <!--<p class="card-date">Issued June 2023</p>-->
-                </div>
-                <div class="card-body">
-                    <p>Certified in Oracle APEX.</p>
-                </div>
-                <div class="card-footer">
-                    <!--<a href="#" class="btn btn-secondary">View Credential</a>-->
-                </div>
+            <div class="card-body">
+                <p>Certified in Advanced Python.</p>
             </div>
+            <div class="card-footer">
+                <!--<a href="#" class="btn btn-secondary">View Credential</a>-->
+            </div>
+        </div>
+         <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">R programming</h3>
+                <p class="card-subtitle"></p>
+                <!--<p class="card-date">Issued June 2023</p>-->
+            </div>
+            <div class="card-body">
+                <p>Certified in R Programming.</p>
+            </div>
+            <div class="card-footer">
+                <!--<a href="#" class="btn btn-secondary">View Credential</a>-->
+            </div>
+        </div>
+         <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Web Development Framework</h3>
+                <p class="card-subtitle"></p>
+                <!--<p class="card-date">Issued June 2023</p>-->
+            </div>
+            <div class="card-body">
+                <p>Certified in web development Framework.</p>
+            </div>
+            <div class="card-footer">
+                <!--<a href="#" class="btn btn-secondary">View Credential</a>-->
+            </div>
+        </div>
+         <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Coursera AWS S3 Basics, Kubernetes, VPC</h3>
+                <p class="card-subtitle">Coursera</p>
+                <!--<p class="card-date">Issued June 2023</p>-->
+            </div>
+            <div class="card-body">
+                <p>Certified in AWS S3 Basics, Kubernetes, VPC.</p>
+            </div>
+            <div class="card-footer">
+                <!--<a href="#" class="btn btn-secondary">View Credential</a>-->
+            </div>
+        </div>
+         <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">IBM Data Science, Data Science Methodology, Tools for Data Science, Machine Learning Pipeline (Dataiku)</h3>
+                <p class="card-subtitle">IBM</p>
+                <!--<p class="card-date">Issued June 2023</p>-->
+            </div>
+            <div class="card-body">
+                <p>Certified in Data Science, Data Science Methodology, Tools for Data Science, Machine Learning Pipeline (Dataiku).</p>
+            </div>
+            <div class="card-footer">
+                <!--<a href="#" class="btn btn-secondary">View Credential</a>-->
+            </div>
+        </div>
+          <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Chatbot Development</h3>
+                <p class="card-subtitle"></p>
+                <!--<p class="card-date">Issued June 2023</p>-->
+            </div>
+            <div class="card-body">
+                <p>Certified in Chatbot Development.</p>
+            </div>
+            <div class="card-footer">
+                <!--<a href="#" class="btn btn-secondary">View Credential</a>-->
+            </div>
+        </div>
+         <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Oracle APEX Intern | INOAUG: India Oracle APEX User Group | Virtu</h3>
+                <p class="card-subtitle"></p>
+                <!--<p class="card-date">Issued June 2023</p>-->
+            </div>
+            <div class="card-body">
+                <p>Certified in Oracle APEX.</p>
+            </div>
+            <div class="card-footer">
+                <!--<a href="#" class="btn btn-secondary">View Credential</a>-->
+            </div>
+        </div>
+    </div>
+</section>
 
+<!-- Recommendations Section -->
+<section id="recommendations">
+    <div class="section-header">
+        <h2 class="section-title">What People Say About Me</h2>
+        <p class="section-subtitle">Recommendations from colleagues and supervisors</p>
+    </div>
+    <div class="cards-container">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Arthitha Ravindran</h3>
+                <p class="card-subtitle">Senior Growth Lead at Tacheon - Currently scaling Tikitoro | Ex PwC</p>
+                <p class="card-date">April 15, 2025 - Worked with Sanjay on the same team</p>
+            </div>
+            <div class="card-body">
+                <p>"I've had the pleasure of working closely with Sanjay, and I can confidently say he is one of the most proactive and dedicated professionals I've come across. He consistently goes above and beyond to ensure things get done, often stepping outside of his immediate responsibilities to solve problems and support the team. What truly sets him apart is his ability to maintain a positive and lively atmosphere, even during high-pressure situations. He's a true team player who not only brings solutions to the table but also brings people together with his energy and enthusiasm. Any team would be lucky to have someone like Sanjay—a reliable, resourceful, and uplifting presence who gets things done while lifting those around him."</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://www.linkedin.com/in/arthitha-ravindran-6aa974157/details/recommendations/" target="_blank" class="btn btn-secondary">View Profile</a>
+            </div>
         </div>
-    </section>
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Adithya Kanakraj</h3>
+                <p class="card-subtitle">Domain Head || Internal Audit || Plant || Hyundai</p>
+                <p class="card-date">October 7, 2024 - Managed Sanjay directly</p>
+            </div>
+            <div class="card-body">
+                <p>"I had the pleasure of supervising Sanjay during his internship in Data Analytics. He demonstrated exceptional skills in:<br>
+                - Data analysis and visualization<br>
+                - Python programming<br><br>
+                Sanjay showcased:<br>
+                - Strong problem-solving abilities<br>
+                - Positive learning mindset<br>
+                - Quick adaptability<br><br>
+                He has the skills, passion, and potential to excel. I confidently endorse Sanjay for any Data analytics related opportunities to exhibit his skill set."</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://www.linkedin.com/in/adithya-kanakraj-b1773a54/details/recommendations/" target="_blank" class="btn btn-secondary">View Profile</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Vishnu Bhaskara</h3>
+                <p class="card-subtitle">Senior Manager @ Hyundai Motor India Ltd. | Manufacturing, New Product Implementation, Internal Auditor</p>
+                <p class="card-date">October 3, 2024 - Managed Sanjay directly</p>
+            </div>
+            <div class="card-body">
+                <p>"Sanjay worked in Hyundai Motors India as a part of an internship program for 6 months. He consistently gave 100 percent effort to the team and played a significant role in ensuring that we completed data analytics project on time. I'm grateful to have worked with Mr. Sanjay and highly recommend him to any company."</p>
+            </div>
+            <div class="card-footer">
+                <a href="https://www.linkedin.com/in/vishnu-bhaskara/details/recommendations/" target="_blank" class="btn btn-secondary">View Profile</a>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <!-- Achievements Section -->
-    <section id="achievements">
-        <div class="section-header">
-            <h2 class="section-title">Achievements</h2>
-            <p class="section-subtitle">Notable accomplishments and recognitions</p>
+<!-- Achievements Section -->
+<section id="achievements">
+    <div class="section-header">
+        <h2 class="section-title">Achievements</h2>
+        <p class="section-subtitle">Notable accomplishments and recognitions</p>
+    </div>
+    <div class="achievements-list">
+        <div class="achievement-item">
+            <p>Led cross-functional teams to deliver high-impact, data-driven projects under tight deadlines.</p>
         </div>
-        <div class="achievements-list">
-            <div class="achievement-item">
-                <p>Led cross-functional teams to deliver high-impact, data-driven projects under tight deadlines.</p>
-            </div>
-            <div class="achievement-item">
-                <p>Enhanced operational efficiency by reducing manual processing and streamlining data workflows.</p>
-            </div>
-            <div class="achievement-item">
-                <p>Recognized for strong technical proficiency and the ability to rapidly learn and implement innovative data solutions.</p>
-            </div>
-             <div class="achievement-item">
-                <p>Contributed to process improvement projects, including LEAN/automation initiatives, that elevated overall data quality and operational accuracy.</p>
-            </div>
+        <div class="achievement-item">
+            <p>Enhanced operational efficiency by reducing manual processing and streamlining data workflows.</p>
         </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="section-header">
-            <h2 class="section-title">Contact</h2>
-            <p class="section-subtitle">Feel free to reach out for collaboration or inquiries</p>
+        <div class="achievement-item">
+            <p>Recognized for strong technical proficiency and the ability to rapidly learn and implement innovative data solutions.</p>
         </div>
-        <div class="contact-info">
-            <div class="contact-card">
-                <div class="contact-icon">
-                   <i class="fa fa-phone"></i>
-                </div>
-                <h3>Phone</h3>
-                <p><a href="tel:+919360734551">+91 93607 34551</a></p>
-            </div>
-            <div class="contact-card">
-                <div class="contact-icon">
-                   <i class="fa fa-envelope"></i>
-                </div>
-                <h3>Email</h3>
-                <p><a href="mailto:sanjaydharand@gmail.com">sanjaydharand@gmail.com</a></p>
-            </div>
-            <div class="contact-card">
-                <div class="contact-icon">
-                   <i class="fa fa-linkedin"></i>
-                </div>
-                <h3>LinkedIn</h3>
-                <p><a href="https://www.linkedin.com/in/sanjay-dharan-99736321b">linkedin.com/in/sanjay-dharan-99736321b</a></p>
-            </div>
+         <div class="achievement-item">
+            <p>Contributed to process improvement projects, including LEAN/automation initiatives, that elevated overall data quality and operational accuracy.</p>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <p class="footer-text">Connect with me!</p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/sanjay-dharan-99736321b" class="social-icon"><i class="fa fa-linkedin"></i></a>
-                 <a href="mailto:sanjaydharand@gmail.com" class="social-icon"><i class="fa fa-envelope"></i></a>
-                 <a href="tel:+919360734551" class="social-icon"><i class="fa fa-phone"></i></a>
+    </div>
+</section>
+<!-- Contact Section -->
+<section id="contact">
+    <div class="section-header">
+        <h2 class="section-title">Contact</h2>
+        <p class="section-subtitle">Feel free to reach out for collaboration or inquiries</p>
+    </div>
+    <div class="contact-info">
+        <div class="contact-card">
+            <div class="contact-icon">
+               <i class="fa fa-phone"></i>
             </div>
-            <p class="copyright">© 2024 Sanjay Dharan. All rights reserved.</p>
+            <h3>Phone</h3>
+            <p><a href="tel:+919360734551">+91 93607 34551</a></p>
         </div>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script>
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        <div class="contact-card">
+            <div class="contact-icon">
+               <i class="fa fa-envelope"></i>
+            </div>
+            <h3>Email</h3>
+            <p><a href="mailto:sanjaydharand@gmail.com">sanjaydharand@gmail.com</a></p>
+        </div>
+        <div class="contact-card">
+            <div class="contact-icon">
+               <i class="fa fa-linkedin"></i>
+            </div>
+            <h3>LinkedIn</h3>
+            <p><a href="https://www.linkedin.com/in/sanjay-dharan-99736321b">linkedin.com/in/sanjay-dharan-99736321b</a></p>
+        </div>
+    </div>
+</section>
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <p class="footer-text">Connect with me!</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/sanjay-dharan-99736321b" class="social-icon"><i class="fa fa-linkedin"></i></a>
+             <a href="mailto:sanjaydharand@gmail.com" class="social-icon"><i class="fa fa-envelope"></i></a>
+             <a href="tel:+919360734551" class="social-icon"><i class="fa fa-phone"></i></a>
+        </div>
+        <p class="copyright">© 2024 Sanjay Dharan. All rights reserved.</p>
+    </div>
+</footer>
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script>
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navLinks = document.getElementById('navLinks');
+    mobileMenuBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+    
+    // Update Navigation to include Recommendations
+    document.addEventListener('DOMContentLoaded', () => {
         const navLinks = document.getElementById('navLinks');
+        const recommendationsLink = document.createElement('a');
+        recommendationsLink.href = '#recommendations';
+        recommendationsLink.textContent = 'Recommendations';
+        
+        // Insert before Contact link
+        const contactLink = navLinks.querySelector('a[href="#contact"]');
+        navLinks.insertBefore(recommendationsLink, contactLink);
+    });
 
-        mobileMenuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-
-        // Timeline Observer
-        const timelineItems = document.querySelectorAll('.timeline-item');
-
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        });
-
-        timelineItems.forEach(item => {
-            observer.observe(item);
-        });
-
-        // Particle Effect
-        document.addEventListener('DOMContentLoaded', () => {
-            const particlesContainer = document.getElementById('particles');
-            const numParticles = 50;
-
-            for (let i = 0; i < numParticles; i++) {
-                const particle = document.createElement('div');
-                particle.classList.add('particle');
-                particle.style.left = `${Math.random() * 100}vw`;
-                particle.style.top = `${Math.random() * 100}vh`;
-                particle.style.animationDelay = `${Math.random() * 5}s`;
-                particlesContainer.appendChild(particle);
+    // Timeline Observer
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
             }
         });
-    </script>
-</body>
-</html>
+    });
+    timelineItems.forEach(item => {
+        observer.observe(item);
+    });
+    
+    // Particle Effect
+    document.addEventListener('DOMContentLoaded', () => {
+        const particlesContainer = document.getElementById('particles');
+        const numParticles = 50;
+        for (let i = 0; i < numParticles; i++) {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+            particle.style.left = `${Math.random() * 100}vw`;
+            particle.style.top = `${Math.random() * 100}vh`;
+            particle.style.animationDelay = `${Math.random() * 5}s`;
+            particlesContainer.appendChild(particle);
+        }
+    });
+    
+    // Enhance card transitions
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.style.transform = 'translateY(-8px)';
+            card.style.boxShadow = 'var(--glow)';
+            card.style.borderColor = 'var(--accent-primary)';
+        });
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'translateY(0)';
+            card.style.boxShadow = 'var(--shadow)';
+            card.style.borderColor = 'rgba(0, 255, 170, 0.1)';
+        });
+    });
+</script>
